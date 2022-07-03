@@ -43,7 +43,7 @@ class DetailsActivity : AppCompatActivity() {
         intent?.getIntExtra(EXTRAS_MOVIE_ID, 0)?.let { id ->
             viewModel.getMovieDetail(id)
             subscribeUi()
-        } ?: showError("Unknown Movie")
+        } ?: showError("잘못된 영화 정보입니다")
     }
 
     override fun onSupportNavigateUp(): Boolean {

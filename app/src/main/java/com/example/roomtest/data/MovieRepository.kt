@@ -14,7 +14,6 @@ class MovieRepository @Inject constructor(
     private val movieRemoteDataSource: MovieRemoteDataSource,
     private val movieDao: MovieDao
 ) {
-
     suspend fun fetchTrendingMovies(): Flow<com.example.roomtest.model.Result<TrendingMovieResponse>?> {
         return flow {
             emit(fetchTrendingMoviesCached())
